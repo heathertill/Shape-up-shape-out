@@ -11,10 +11,10 @@
 #Objectives - HTML
 * Your shape painter should handle four shapes: Square, Rectangle, Circle, and Triangle
 * In your index.html, go ahead and add labeled input fields and insert buttons for each shape type:
-- Rectangle: Inputs for width and height, and an insert button
-- Square: Input for side length and an insert button
-- Circle: Input for radius and an insert button
-- Isoceles Right Triangle: Input for height and an insert button
+    - Rectangle: Inputs for width and height, and an insert button
+    - Square: Input for side length and an insert button
+    - Circle: Input for radius and an insert button
+    - Isoceles Right Triangle: Input for height and an insert button
 * Each of the insert buttons above should create a new instance of that particular shape, which should draw itself on the screen with the specified size and placed in a random location (object details are below)
 * Create a 600px by 600px div with the background color of your choosing. All the shapes you insert will be drawn within this div
 * Show a sidepanel beside this shape canvas. It should display the following information for a clicked shape:
