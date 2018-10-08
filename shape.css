@@ -1,0 +1,62 @@
+#shapesDiv {
+    height: 600px;
+    width: 600px;
+    background-color: #F5F1ED;
+}
+
+.mainDivs {
+    margin-left: 10px;
+}
+
+#shapesDiv {
+    border: 2px solid #5F6777;
+    float: left;
+}
+h1 {
+    color: #2D2B2B;
+}
+
+h4 {
+    color: #2D2B2B; 
+}
+#creatorDiv {
+    width: 910px;
+    height: 230px;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    border: 2px solid #5F6777;
+    background-color: #AAC9E0;
+    color: #2D2B2B;
+}
+
+.shapes {
+    float: left;
+    width: 210px;
+}
+
+#btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#sidepanel {
+    margin-left: 10px;
+    float: left;
+    border: 2px solid #5F6777;
+    width: 300px;
+    height: 600px;
+    background-color: #AAC9E0;
+}
+
+#rectangleDiv {
+    margin-left: 20px;
+}
+
+#header {
+    text-align: center;
+}
+
+body {
+    background-color: #AF9F8B;
+}

@@ -58,7 +58,7 @@ Needs to call the constructor of its logical parent class
     - Drawing a triangle is going to be tricky!
     - Circles should be purple, Squares should be red, Triangles should be yellow, and Rectangles should be green
 
-## Hints/Resources
+## gitHints/Resources
 * Try to use CSS class names and write as many styles onto those class names as you can
     - Only use inline-styles when necessary (and some things will require it in this lab)
 * It may help to review relative vs absolute positioning, and how `top` and `left` can be used to specify the location of an html element
