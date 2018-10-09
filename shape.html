@@ -14,34 +14,51 @@
 <body>
     <h1 id="header">Shape Up or Shape Out!!!</h1>
     <div id="creatorDiv" class="mainDivs">
-        
-        <div class="shapes" id="rectangleDiv">
-            <h4>Rectangle</h4> 
-            Width: <input type="number"><br>
-            Height: <input type="number"><br>
-            <button id="btn">Insert</button>
-        </div> 
-        <div class="shapes" id="squareDiv">
-            <h4>Square</h4>
-            Side Length: <input type="number"><br>
-            <button id="btn">Insert</button>
-        </div> 
-        <div class="shapes" id="circleDiv">
-            <h4>Circle</h4>
-            Radius: <input type="number"><br>
-            <button id="btn">Insert</button>
-        </div> 
-        <div class="shapes" id="isocelesDiv">
-            <h4>Triangle</h4>
-            Height: <input type="number"><br>
-            <button id="btn">Insert</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="shapes" id="rectangleDiv">
+                        <h4>Rectangle</h4>
+                        Width: <br> <input id="recWidth" class="shapeInput" type="number" value=""><br>
+                        Height: <br> <input id="recHeight" class="shapeInput" type="number" value=""><br>
+                        <button id="recButton" class="btn">Insert</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shapes" id="squareDiv">
+                        <h4>Square</h4>
+                        Side Length: <br> <input id="sqWidth" class="shapeInput" type="number" value=""><br>
+                        <button id="squareBtn" class="btn">Insert</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shapes" id="circleDiv">
+                        <h4>Circle</h4>
+                        Radius: <br> <input id="cirWidth" class="shapeInput" type="number" value=""><br>
+                        <button id="circleBtn" class="btn">Insert</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shapes" id="isocelesDiv">
+                        <h4>Triangle</h4>
+                        Height: <br> <input id="triWidth" class="shapeInput" type="number" value=""><br>
+                        <button id="triangleBtn" class="btn">Insert</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="shapesDiv" class="mainDivs"></div>
-    <div id="sidepanel">
-        <h4>Shape Info:</h4>
-    </div>
+<div class="boxes">
+        <div id="canvas" class="mainDivs lowerDivs flex-2"></div>
+        <div id="sidepanel" class="lowerDivs flex-1">
+            <h4>Shape Info:</h4>
+        </div>
+    
 
+</div>
+
+
+    
 
 
 

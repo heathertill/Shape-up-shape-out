@@ -1,56 +1,64 @@
-#shapesDiv {
-    height: 600px;
-    width: 600px;
-    background-color: #F5F1ED;
+.boxes {
+    display: flex;
+    width: 920px;
+    height: 608px;
 }
 
-.mainDivs {
+.shape {
+    position: absolute;
+}
+
+.lowerDivs {
+    margin-top: 8px;
+    border: 2px solid #5f6777;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-1 {
+    flex: 1;
+}
+#canvas {
+    position: relative;
+    background-color: #f5f1ed;
     margin-left: 10px;
 }
 
-#shapesDiv {
-    border: 2px solid #5F6777;
-    float: left;
-}
-h1 {
-    color: #2D2B2B;
+.container {
+    position: absolute;
+    width: 910px;
 }
 
-h4 {
-    color: #2D2B2B; 
+h1, h4 {
+    color: #2d2b2b;
 }
+
 #creatorDiv {
+    margin-left: 10px;
     width: 910px;
     height: 230px;
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    border: 2px solid #5F6777;
-    background-color: #AAC9E0;
-    color: #2D2B2B;
+    border: 2px solid #5f6777;
+    background-color: #aac9e0;
+    color: #2d2b2b;
 }
 
 .shapes {
-    float: left;
-    width: 210px;
+    width: 188px;
 }
 
-#btn {
+.btn {
     margin-top: 15px;
     margin-bottom: 15px;
+    height: 30px;
+    line-height: 0px;
+    border: 2px solid #5f6777;
 }
 
 #sidepanel {
     margin-left: 10px;
-    float: left;
-    border: 2px solid #5F6777;
-    width: 300px;
-    height: 600px;
-    background-color: #AAC9E0;
-}
-
-#rectangleDiv {
-    margin-left: 20px;
+    background-color: #aac9e0;
 }
 
 #header {
@@ -58,5 +66,35 @@ h4 {
 }
 
 body {
-    background-color: #AF9F8B;
+    background-color: #af9f8b;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+#rectangle {
+    width: 200px;
+    height: 100px;
+    background: green;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: purple;
+    border-radius: 50%;
+}
+
+#triangle-bottomleft {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid yellow;
+    border-right: 100px solid transparent;
+}
+
+.shapeInput {
+    width: 100px;
 }
