@@ -1,53 +1,122 @@
-
-
 const MAX = 600;
 let canvas = document.getElementById('canvas');
+let sidepanel = document.getElementById('sidepanel');
+let recButton = document.getElementById('recButton');
+let recWidth = document.getElementById('recWidth');
+let recHeight = document.getElementById('recHeight');
+let circleBtn = document.getElementById('circleBtn');
+let cirRadius = document.getElementById('cirRadius');
+let squareBtn = document.getElementById('squareBtn');
+let sqWidth = document.getElementById('sqWidth');
+let triangleBtn = document.getElementById('triangleBtn');
+let triWidth = document.getElementById('triWidth');
+
 class Shape {
-    constructor(x, y, a, b) {
+    constructor(width, height) {
         this.div = document.createElement('div');
         this.div.classList.add('shape');
-        this.div.style.left = `${x}px`;
-        this.div.style.top = `${y}px`;
-        this.div.style.width = `${a}px`;
-        this.div.style.height = `${b}px`;
-        this.div.style.backgroundColor = 'red';
+        let xVal = randomVal(0, this.adjustLoc(width))
+        let yVal = randomVal(0, this.adjustLoc(height))
+        this.div.style.width = `${width}px`;
+        this.div.style.height = `${height}px`;
+        this.div.style.left = `${xVal}px`;
+        this.div.style.top = `${yVal}px`;
+        this.div.id = 'rectangle';
+        this.name = 'Shape';
+        this.radius = 0;
+        this.area = height * width;
+        this.perimeter = height * 2 + width * 2;
+        this.div.addEventListener('click', () => this.describe());
+        this.div.addEventListener('dblclick', () => this.div.remove());
         canvas.appendChild(this.div);
     }
- 
 
- 
+    adjustLoc(val) {
+        let max = 600 - val;
+        return max;
+        
+    }
+
+    describe() {
+        shpName.textContent = this.name;
+        shpWidth.textContent = this.div.style.width;
+        shpHeight.textContent = this.div.style.height;
+        shpRadius.textContent = this.radius;
+        shpArea.textContent = this.area;
+        shpPerimeter.textContent = this.perimeter;
+    }
+    remove() {
+        this.div.remove();
+    }
 }
-let recButton = document.getElementById('recButton');
-recButton.addEventListener('click', insertShape);
-
-
-// let recButton = document.getElementById('recButton');
-// recButton.addEventListener('click', insertShape);
-
-// class Rectangle extends Shape {
-//     constructor() {
-//         super();
-//     }
-
-// }
-
-function insertShape() {
-    let recHeight = document.getElementById('recHeight');
-    let recWidth = document.getElementById('recWidth');
-    let height = recHeight.value;
-    let width = recWidth.value;
-    let xAdjMAX = MAX - width;
-    let yAdjMAX = MAX - height;
-    let xVal = randomVal(0, xAdjMAX);
-    let yVal = randomVal(0, yAdjMAX);
-    console.log(width, height, 'width & height')
-    console.log(xVal, yVal, 'plain')
-    console.log(xAdjMAX, yAdjMAX, 'adjusted')
-    let sq = new Shape(xVal, yVal, width, height);
-}
-
-
-
 function randomVal(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
+class Rectangle extends Shape {
+    constructor(width, height) {
+        super(width, height);
+        this.div.id = 'rectangle';
+        this.name = 'Rectangle';
+    }
+}
+class Circle extends Shape {
+    constructor(radius) {
+        super(radius * 2, radius * 2);
+        this.div.id = 'circle';
+        this.name = 'Circle';
+        this.area = parseInt((radius * radius) * 3.14159)
+        this.perimeter = parseInt((2 * radius) * 3.14159)
+    }
+}
+
+class Square extends Shape {
+    constructor(side) {
+        super(side, side);
+        this.div.id = 'square';
+        this.name = 'Square';
+        this.area = side * side;
+        this.perimeter = side * 4;
+    }
+}
+
+class Triangle extends Shape {
+    constructor(side) {
+        super(side, side);
+        this.div.id = 'triangle';
+        this.name = 'Triangle';
+        this.div.style.borderBottomWidth = `${side}px`;
+        this.div.style.borderBottomStyle = 'solid';
+        this.div.style.borderBottomColor = '#FDD835'
+        this.div.style.borderRightWidth = `${side}px`;
+        this.div.style.borderRightStyle = 'solid';
+        this.div.style.borderRightColor = 'transparent';
+    
+
+        this.area = 0.5 * (side * side);
+        this.perimeter = parseInt((2 * side) + (Math.sqrt(2) * side));
+    }
+}
+
+function insertRectangle() {
+    let rec = new Rectangle(recWidth.value, recHeight.value);
+}
+
+function insertCircle() {
+    let cir = new Circle(cirRadius.value);
+}
+
+function insertSquare() {
+    let sq = new Square(sqWidth.value);
+}
+
+function insertTriangle() {
+    let tri = new Triangle(triWidth.value);
+}
+
+recButton.addEventListener('click', insertRectangle);
+
+squareBtn.addEventListener('click', insertSquare);
+
+circleBtn.addEventListener('click', insertCircle);
+
+triangleBtn.addEventListener('click', insertTriangle);

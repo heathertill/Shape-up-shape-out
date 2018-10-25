@@ -72,27 +72,17 @@ body {
 #square {
     width: 100px;
     height: 100px;
-    background: red;
+    background: #C11B17;
 }
 
 #rectangle {
-    width: 200px;
-    height: 100px;
     background: green;
 }
 
 #circle {
-    width: 100px;
-    height: 100px;
+   
     background: purple;
     border-radius: 50%;
-}
-
-#triangle-bottomleft {
-    width: 0;
-    height: 0;
-    border-bottom: 100px solid yellow;
-    border-right: 100px solid transparent;
 }
 
 .shapeInput {
